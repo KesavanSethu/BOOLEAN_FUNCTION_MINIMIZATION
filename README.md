@@ -19,8 +19,20 @@ Hardware – PCs, Cyclone II , USB flasher
 **Logic Diagram**
 ![LOGIC DIAGRAM EXP-1-1](https://github.com/user-attachments/assets/7762c386-7742-4d9b-be22-dde71bf0d9fd)
 
+module function1(a,b,c,d,f1);
+input a,b,c,d;
+output f1;
+assign f1=((~b & ~d)|(~a & b & d)|(a & b & ~c));
+endmodule
+
+
 ![LOGIC DIAGRAM 2-2](https://github.com/user-attachments/assets/77e4a106-931a-444a-989b-396d7ecfc777)
 
+module function2(w,x,y,z,f2);
+input w,x,y,z;
+output f2;
+assign f2=((~y & z)|( w & y )|(x & y));
+endmodule
 
 **Procedure**
 
@@ -36,19 +48,6 @@ Hardware – PCs, Cyclone II , USB flasher
 
 
 **Program:**
-
-
-module function1(a,b,c,d,f1);
-input a,b,c,d;
-output f1;
-assign f1=((~b & ~d)|(~a & b & d)|(a & b & ~c));
-endmodule
-
-module function2(w,x,y,z,f2);
-input w,x,y,z;
-output f2;
-assign f2=((~y & z)|( w & y )|(x & y));
-endmodule
 
 /* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
 
