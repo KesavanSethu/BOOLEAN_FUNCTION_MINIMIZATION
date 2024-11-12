@@ -37,6 +37,7 @@ Hardware – PCs, Cyclone II , USB flasher
 
 **Program:**
 
+
 module function1(a,b,c,d,f1);
 input a,b,c,d;
 output f1;
